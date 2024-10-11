@@ -1,0 +1,9 @@
+    # 終了後に discordのwebhookで通知を行う
+    - name: Notify Discord
+      run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+            "content": "メッセージを送る！https://back-to-back.vercel.app/"
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
