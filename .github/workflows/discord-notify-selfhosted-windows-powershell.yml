@@ -36,4 +36,4 @@ jobs:
     #     cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ここに名前を入れる\", \"content\": \"メッセージを送る！\"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL'
     #     Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"namename`", `"content`": `"messagemessage`"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL 
       run: |
-          Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"なまえ`", `"content`": `"めっせーじ`"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
+          Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"name`", `"content`": `"message`"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
