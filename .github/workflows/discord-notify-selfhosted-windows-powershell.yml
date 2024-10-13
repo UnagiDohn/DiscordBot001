@@ -35,4 +35,4 @@ jobs:
     - name: Notify Discord
     #     cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ここに名前を入れる\", \"content\": \"メッセージを送る！\"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL'
       run: |
-          cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ここに名前を入れる\", \"content\": \"メッセージを送る！\"}" ${{ secrets.DISCORD_WEBHOOK_URL }}'
+          cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ここに名前を入れる\", \"content\": \"メッセージを送る！\"}" "${{ secrets.DISCORD_WEBHOOK_URL }}"'
