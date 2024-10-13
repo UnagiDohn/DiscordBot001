@@ -15,14 +15,14 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
-    # ã‚¸ãƒ§ãƒ–ã‚’ã€ä»®æƒ³ãƒã‚·ãƒ³ä¸Šã§è¡Œã†.
+    # ƒWƒ‡ƒu‚ğA‰¼‘zƒ}ƒVƒ“ã‚Ås‚¤.
     # runs-on: ubuntu-latest
-    # ã‚¸ãƒ§ãƒ–ã‚’ã€ã‚»ãƒ«ãƒ•ãƒ›ã‚¹ãƒ†ãƒƒãƒ‰ãƒ©ãƒ³ãƒŠãƒ¼ï¼ˆè‡ªåˆ†ã§ç”¨æ„ã—ãŸPCï¼‰ã§å®Ÿè¡Œã™ã‚‹.
+    # ƒWƒ‡ƒu‚ğAƒZƒ‹ƒtƒzƒXƒeƒbƒhƒ‰ƒ“ƒi[i©•ª‚Å—pˆÓ‚µ‚½PCj‚ÅÀs‚·‚é.
     runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # çµ‚äº†å¾Œã« discordã®webhookã§é€šçŸ¥ã‚’è¡Œã†
+    # I—¹Œã‚É discord‚Ìwebhook‚Å’Ê’m‚ğs‚¤
     - name: pwdcheck
       run: |
           pwd
@@ -33,7 +33,7 @@ jobs:
       run: |
           echo ${{ secrets.DISCORD_WEBHOOK_URL }}
     - name: Notify Discord
-    #     cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ã“ã“ã«åå‰ã‚’å…¥ã‚Œã‚‹\", \"content\": \"ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹ï¼\"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL'
+    #     cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"‚±‚±‚É–¼‘O‚ğ“ü‚ê‚é\", \"content\": \"ƒƒbƒZ[ƒW‚ğ‘—‚éI\"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL'
     #     Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"namename`", `"content`": `"messagemessage`"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL 
       run: |
-          Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"ãªã¾ãˆ`", `"content`": `"ã‚ã£ã›ãƒ¼ã˜`"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
+          Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"username`": `"‚È‚Ü‚¦`", `"content`": `"‚ß‚Á‚¹[‚¶`"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
