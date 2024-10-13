@@ -16,9 +16,9 @@ jobs:
   greet:
     # The type of runner that the job will run on
     # ジョブを、仮想マシン上で行う.
-    # runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     # ジョブを、セルフホステッドランナー（自分で用意したPC）で実行する.
-    runs-on: self-hosted
+    # runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

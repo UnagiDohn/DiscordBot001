@@ -1,0 +1,31 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow Discord
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+#    schedule:
+#      - cron: "10 * * * *"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  greet:
+    # The type of runner that the job will run on
+    # ジョブを、仮想マシン上で行う.
+    # runs-on: ubuntu-latest
+    # ジョブを、セルフホステッドランナー（自分で用意したPC）で実行する.
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # 終了後に discordのwebhookで通知を行う
+    - name: Notify Discord
+      run: |
+          cmd.exe /c 'curl -H "Content-Type: application/json" -X POST -d "{\"username\": \"ここに名前を入れる\", \"content\": \"メッセージを送る！\"}" https://discord.com/api/webhooks/1294410759958298665/NsinS1PTNjGS8J8GFl_m37V36xB-1GzZNSfnoaTEF_LnwnUIqWqoMcWA_Gv3L15iFcxL'
+    - name: pwdcheck
+      run: |
+          pwd
